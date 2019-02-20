@@ -10,7 +10,7 @@ and use Django and RestFramework to manage a Data Models, Web API, and serve sta
 
 While it's possible to add endpoints to serve django-rendered html responses, the intention is to use Django primarily for the backend, and have view rendering and routing and handled by Vue + Vue Router as a Single Page Application (SPA).
 
-Out of the box, Django will serve the application entry point (`index.html` + bundled assets) at `/` , 
+Out of the box, Django will serve the application entry point (`index.html` + bundled assets) at `/` ,
 data at `/api/`, and static files at `/static/`. Django admin panel is also available at `/admin/` and can be extended as needed.
 
 The application templates from Vue Cli `create` and Django `createproject` are kept as close as possible to their
@@ -23,6 +23,8 @@ If this setup is not what you are looking for, you might want look at other simi
 * [ariera/django-vue-template](https://github.com/ariera/django-vue-template)
 * [vchaptsev/cookiecutter-django-vue](https://github.com/vchaptsev/cookiecutter-django-vue)
 
+Prefer Flask? Checkout my [gtalarico/flask-vuejs-template](https://github.com/gtalarico/flask-vuejs-template)
+
 ### Demo
 
 [Live Demo](https://django-vue-template-demo.herokuapp.com/)
@@ -34,6 +36,7 @@ If this setup is not what you are looking for, you might want look at other simi
 * Django Whitenoise, CDN Ready
 * Vue Cli 3
 * Vue Router
+* Vuex
 * Gunicorn
 * Configuration for Heroku Deployment
 
@@ -63,7 +66,7 @@ Before getting started you should have the following installed and running:
 ## Setup Template
 
 ```
-$ git clone https://www.github.com/gtalarico/django-vue
+$ git clone https://github.com/gtalarico/django-vue-template
 $ cd django-vue
 ```
 
@@ -150,3 +153,5 @@ Whitenoise will serve static files to your CDN once, but then those assets are c
 and served directly by the CDN.
 
 This allows for an extremely simple setup without the need for a separate static server.
+
+[Cloudfront Setup Wiki](https://github.com/gtalarico/django-vue-template/wiki/Setup-CDN-on-Cloud-Front)
